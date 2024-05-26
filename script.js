@@ -12,17 +12,26 @@ convertBtn.addEventListener("click", function () {
     volumeInput.textContent = ""
     massInput.textContent = ""
 
-    lengthInput.textContent += `${userInput.value} meters = ${Number(userInput.value * 3.281).toFixed(3)} feet | ${userInput.value} feet = ${Number(userInput.value / 3.281).toFixed(3)} meters`
+    if (userInput.value === "0") {
 
-    volumeInput.textContent += `${userInput.value} liters = ${Number(userInput.value * 0.264).toFixed(3)} gallons | ${userInput.value} gallons = ${Number(userInput.value / 0.264).toFixed(3)} liters`
+        lengthInput.textContent = ""
+        volumeInput.textContent = ""
+        massInput.textContent = ""
 
-    massInput.textContent += `${userInput.value} kilos = ${Number(userInput.value * 2.204).toFixed(3)} pounds | ${userInput.value} pounds = ${Number(userInput.value / 2.204).toFixed(3)} kilos`
+    } else if (userInput.value !== "") {
+
+        lengthInput.textContent += `${userInput.value} meters = ${Number(userInput.value * 3.281).toFixed(3)} feet | ${userInput.value} feet = ${Number(userInput.value / 3.281).toFixed(3)} meters`
+
+        volumeInput.textContent += `${userInput.value} liters = ${Number(userInput.value * 0.264).toFixed(3)} gallons | ${userInput.value} gallons = ${Number(userInput.value / 0.264).toFixed(3)} liters`
+
+        massInput.textContent += `${userInput.value} kilos = ${Number(userInput.value * 2.204).toFixed(3)} pounds | ${userInput.value} pounds = ${Number(userInput.value / 2.204).toFixed(3)} kilos`
+
+    }
 })
 
-resetBtn.addEventListener("click", function() {
+resetBtn.addEventListener("click", function () {
     lengthInput.textContent = ""
     volumeInput.textContent = ""
     massInput.textContent = ""
     userInput.value = ""
 })
-

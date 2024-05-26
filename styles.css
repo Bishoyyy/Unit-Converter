@@ -71,6 +71,19 @@ body {
     border-radius: 4px;
 }
 
+#convert-btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(1px);
+}
+
+
+#reset-btn:active {
+    background-color: red;
+    box-shadow: 0 2px #666;
+    transform: translateY(1px);
+}
+
 #conversion-div {
     background-color: #1F2937;
     display: flex;
